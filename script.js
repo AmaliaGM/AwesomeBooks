@@ -7,5 +7,16 @@ let library = [
         Title: "Green eggs and ham",
         Author: "Dr. Seuss",
     }
-]
-localStorage.setItem("library", JSON.stringify(books));
+];
+// console.log(library)
+localStorage.setItem("library", JSON.stringify(library));
+
+let add = document.querySelector('#add');
+add.addEventListener('click', () => {
+    let title = document.querySelector("#title").value
+    let author = document.querySelector("#author").value
+    localStorage.setItem('Title', JSON.stringify(title));
+    localStorage.setItem('Author', JSON.stringify(author));
+});
+
+
