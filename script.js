@@ -12,11 +12,16 @@ let library = [
 localStorage.setItem("library", JSON.stringify(library));
 
 let add = document.querySelector('#add');
-add.addEventListener('click', () => {
+add.addEventListener('click', (e) => {
     let title = document.querySelector("#title").value
     let author = document.querySelector("#author").value
-    localStorage.setItem('Title', JSON.stringify(title));
-    localStorage.setItem('Author', JSON.stringify(author));
+    let newItem = {
+        Title: e.target.dataset.title,
+        Author: e.target.dataset.author,
+    };
+    library.push(newItem);
+    localStorage.setItem('library', JSON.stringify(title));
+    localStorage.setItem('library', JSON.stringify(author));
 });
 
 
