@@ -17,6 +17,7 @@ add.addEventListener('click', () => {
     ;
 });
 
+// SHOW BOOKS ON THE PAGE
 function printBooks() {
     let bookSection = document.getElementById('book-section');
     let libraryArr = JSON.parse(localStorage.getItem('libraryArr'));
@@ -30,6 +31,9 @@ function printBooks() {
     }
 }
 printBooks()
+
+
+let removeBook = localStorage.key(i)
 // let showBooks = document.querySelector('#show-books');
 // showBooks.addEventListener('click', printBooks());
 
@@ -55,4 +59,4 @@ function printBooks() {
 }
 printBooks();
 */
-// SHOW BOOKS ON THE PAGE
+
