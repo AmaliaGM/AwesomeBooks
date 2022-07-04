@@ -32,10 +32,11 @@ function printBooks() {
 }
 printBooks()
 
-
-let removeBook = localStorage.key(i)
-// let showBooks = document.querySelector('#show-books');
-// showBooks.addEventListener('click', printBooks());
+let book2 = document.getElementById('remove-book2');
+book2.addEventListener('click', () => {
+  let libraryArr = JSON.parse(localStorage.getItem('libraryArr'));
+  localStorage.removeItem(libraryArr[1]);
+});
 
 
 
