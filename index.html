@@ -15,19 +15,19 @@
         <nav class="nav-bar">
             <div>Awesome Books</div>
             <ul class="links-list">
-                <li><a href="#book-section">List</a></li>
-                <li><a href="#add-book">Add new</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a class="nav list" href="#book-section">List</a></li>
+                <li><a class="nav add" href="#add-book">Add new</a></li>
+                <li><a class="nav contact" href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="book-section">
-            <h1>Awesome books</h1>
+            <h1 class="mainTitle">Awesome books</h1>
             <ul id="book-list"></ul>
         </section>
 
-        <section id="add-book">
+        <section id="add-book" class="inactive">
             <h2 class="awesome-title">Add a new book</h2>
             <form>
                 <input id="title" type="text" name="Title" placeholder="Book Title:">
@@ -36,7 +36,7 @@
             </form>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="inactive">
             <h2>Contact information</h2>
             <p>Do you have any questions or you just want to say hello?</p>
             <ul>
@@ -47,7 +47,7 @@
         </section>
     </main>
     <footer>
-        <p>Copywrite _</p>
+        <p class="footer">Copywrite</p>
     </footer>
 </body>
 

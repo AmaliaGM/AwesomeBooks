@@ -27,16 +27,36 @@ body {
   background-color: beige;
 }
 
+nav.nav-bar {
+  border: 1px solid #000;
+  padding: 8px;
+}
+
 .links-list {
   display: flex;
   flex-direction: row;
   list-style: none;
-  gap: 30px;
+  gap: 10px;
 }
 
 .links-list li a {
   text-decoration: none;
   color: inherit;
+}
+
+.nav.add {
+ border-left: solid 1px #000;
+ border-right: solid 1px #000;
+ padding-left: 10px;
+ padding-right: 10px;
+}
+
+.nav:hover {
+  color: blue;
+}
+
+.mainTitle {
+  padding: 5%
 }
 
 main {
@@ -130,4 +150,17 @@ form input {
   flex-direction: column;
   gap: 10px;
   padding-left: 40px;
+}
+
+#add-book.inactive {
+  display: none;
+}
+
+#contact.inactive {
+  display: none;
+}
+
+.footer {
+  border: 1px solid #000;
+  padding: 8px;
 }
