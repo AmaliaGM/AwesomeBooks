@@ -1,7 +1,20 @@
+// KEEP TRACK OF NUMBER OF BOOKS ADDED
+
+function bookIDgenerator() {
+    let previousID = JSON.parse(localStorage.getItem('bookIDgenerator'));
+    let newID = previousID + 1;
+    if (previousID == null) {
+        previousID = 1;
+        localStorage.setItem("bookIDgenerator", JSON.stringify(previousID));
+        return previousID;
+    }
+    localStorage.setItem("bookIDgenerator", JSON.stringify(newID));
+    return newID;
+}
+
 // ADD NEW BOOK
 let add = document.querySelector('#add');
 add.addEventListener('click', (event) => {
-    // event.preventDefault();
     let libraryArr = JSON.parse(localStorage.getItem('libraryArr'));
     if (libraryArr == null) {
         libraryArr = [];
@@ -9,14 +22,13 @@ add.addEventListener('click', (event) => {
     let title = document.querySelector("#title").value
     let author = document.querySelector("#author").value
     let newBook = {
-        ID: Date.now(),
+        ID: bookIDgenerator(),
         Title: title,
         Author: author
     };
     libraryArr.push(newBook);
     localStorage.setItem("libraryArr", JSON.stringify(libraryArr));
     let booklist = document.querySelector('#book-list');
-    ;
 });
 
 // SHOW BOOKS ON THE PAGE
@@ -32,10 +44,10 @@ function printBooks() {
                 </div>`
         bookSection.innerHTML += book;
     }
-}
-printBooks()
+};
+printBooks();
 
-// REMOVE BOOK
+// REMOVE BOOK FROM LOCAL STORAGE
 let removeButton = Array.from(document.querySelectorAll('.remove-btn'));
 removeButton.forEach(function (remove) {
     remove.addEventListener('click', (event) => {
@@ -45,38 +57,15 @@ removeButton.forEach(function (remove) {
             return book.ID != index
         })
         localStorage.setItem("libraryArr", JSON.stringify(libraryArr));
-        printBooks()
+        clearBooks();
+        printBooks();
     });
 });
 
-/*
-// REMOVE BOOK
-let book2 = document.getElementById('remove-book1');
-let id = book2.id;
-let i = id.charAt(id.length - 1);
-
-let removeButton = Array.from(document.querySelectorAll('.remove-btn'));
-removeButton.forEach(function(remove){
-    remove.addEventListener('click', () => {
-        // let libraryArr = JSON.parse(localStorage.getItem("libraryArr"));
-        // newlibraryArr = newlibraryArr.filter(value, index, arr) {
-        //         return index != i;
-        //     };
-    });
-})
-*/
-
-// book2.addEventListener('click', () => {
-//     let libraryArr = JSON.parse(localStorage.getItem("libraryArr"));
-//     localStorage.setItem("index-other", i);
-    // const index = libraryArr.findIndex(item => item.Title === "");
-    // localStorage.setItem("index", index);
-
-
-
-
-    // newlibraryArr = newlibraryArr.filter(value, index, arr) {
-    //     return index != i;
-    // };
-// });
-
+// CLEAR ALL BOOKS ON HTML TO PRINT AGAIN
+function clearBooks() {
+    let bookSection = document.getElementById('book-section');
+    while (bookSection.firstChild) {
+        bookSection.removeChild(bookSection.firstChild);
+    }
+};
