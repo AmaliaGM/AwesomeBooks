@@ -13,19 +13,26 @@ function bookIDgenerator() {
 }
 
 // ADD NEW BOOK
+class AddBook {
+  constructor(ID, Title, Author) {
+    this.ID = ID,
+      this.Title = Title,
+      this.Author = Author
+  }
+};
+
+
 const add = document.querySelector('#add');
 add.addEventListener('click', () => {
   let libraryArr = JSON.parse(localStorage.getItem('libraryArr'));
   if (libraryArr == null) {
     libraryArr = [];
   }
+  const ID = bookIDgenerator();
   const title = document.querySelector('#title').value;
   const author = document.querySelector('#author').value;
-  const newBook = {
-    ID: bookIDgenerator(),
-    Title: title,
-    Author: author,
-  };
+  const newBook = new AddBook(ID, title, author);
+  console.log(newBook);
   libraryArr.push(newBook);
   localStorage.setItem('libraryArr', JSON.stringify(libraryArr));
 });
