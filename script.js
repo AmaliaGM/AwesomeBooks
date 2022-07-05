@@ -57,6 +57,7 @@ removeButton.forEach(function (remove) {
             return book.ID != index
         })
         localStorage.setItem("libraryArr", JSON.stringify(libraryArr));
+        location.reload();
         clearBooks();
         printBooks();
     });
