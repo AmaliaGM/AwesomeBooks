@@ -1,56 +1,39 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Awesome Books
 
-> Description the project.
+>This is an app where you can add your selection of books while keeping them in order and delete them whenever you want.  Does not occupy space since it's storaged in browser. 
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
+- css
+- HTML
+- javascript
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+To get a local copy up and running follow these simple example steps:
 
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
+- Clone this repo to your computer using git.
+Or
+- Download the compressed [zip folder](https://github.com/AmaliaGM/AwesomeBooks/archive/refs/heads/master.zip) and use a decompressor to unzip it into your computer. Then open the folder and all the project files will be there.
 
 
 ## Authors
 
-👤 **Author1**
+👤 **Tiago Lelinski Marin**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/Tiago-Lelinski-Marin)
+- Twitter: [@twitterhandle](https://twitter.com/LelinskiMarin)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/tiago-lelinski-marin/)
 
-👤 **Author2**
+👤 **Amalia Gomez Moro**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+GitHub: [@AmaliaGM](https://github.com/AmaliaGM)
+Twitter: [@twitterhandle](https://twitter.com/AmaliaGomezMoro)
+LinkedIn: [LinkedIn](https://www.linkedin.com/in/maria-amalia-gomez-moro/)
 
 ## 🤝 Contributing
 
@@ -61,12 +44,6 @@ Feel free to check the [issues page](../../issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
 
