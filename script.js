@@ -39,25 +39,28 @@ add.addEventListener('click', () => {
 
 // SHOW BOOKS ON THE PAGE
 function printBooks() {
-  const bookSection = document.getElementById('book-section');
+  const bookList = document.getElementById('book-list');
   const libraryArr = JSON.parse(localStorage.getItem('libraryArr'));
   // try to use map
   for (let i = 0; i < libraryArr.length; i += 1) {
-    const book = `<div id="book${i}"class='book'>
-                <p class='title'>${libraryArr[i].Title}</p>
-                <p class='author'>${libraryArr[i].Author}</p>
-                <button id="${libraryArr[i].ID}" class='remove-btn'>Remove</button>
-                </div>`;
-    bookSection.innerHTML += book;
+    const book = `<li id='book${i}'class='book'>
+      <div class='book-info'>            
+        <p class='title'>${libraryArr[i].Title}</p>
+        <p> &nbsp by &nbsp </p> 
+        <p class='author'>${libraryArr[i].Author}</p>
+      </div>
+      <button id="${libraryArr[i].ID}" class='remove-btn'>Remove</button>
+      </li>`;
+    bookList.innerHTML += book;
   }
 }
 printBooks();
 
 // CLEAR ALL BOOKS ON HTML TO PRINT AGAIN
 function clearBooks() {
-  const bookSection = document.getElementById('book-section');
-  while (bookSection.firstChild) {
-    bookSection.removeChild(bookSection.firstChild);
+  const bookList = document.getElementById('book-list');
+  while (bookList.firstChild) {
+    bookList.removeChild(bookList.firstChild);
   }
 }
 

@@ -1,20 +1,133 @@
-.book {
-  border: 1px solid #000;
-  margin: 20px;
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: Lato, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  text-align: center;
-  background-color:rgb(241, 247, 77);
-  margin-top: 30%;
+  background-color: rgb(255, 255, 255);
 }
 
-.awesome-title {
-  color: rgb(56, 54, 54);
-  font-size: 200%;
+.nav-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  background-color: beige;
+}
+
+.links-list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 30px;
+}
+
+.links-list li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+main>* {
+  width: 90%;
+}
+
+#book-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+  gap: 20px;
+}
+
+#book-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+  border: 1px solid #000;
+}
+
+
+#book-list>* {
+  width: 100%;
+}
+
+#book-list li:nth-child(odd) {
+  background-color: rgb(207, 207, 207);
 }
 
 .book {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   border-style: none;
-  
+  background-color: rgb(255, 255, 255);
+  padding: 5px;
+}
+
+
+.book-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.remove-btn {
+  /* margin-right: 10px; */
+}
+
+#add-book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+  width: 60%;
+}
+
+form input {
+  width: 100%;
+}
+
+#add {
+  width: max-content;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+#contact ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 40px;
 }
