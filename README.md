@@ -31,9 +31,11 @@ Or
 
 👤 **Amalia Gomez Moro**
 
-GitHub: @AmaliaGM
-Twitter: @twitterhandle
-LinkedIn: LinkedIn
+
+- GitHub: [@AmaliaGM](https://github.com/AmaliaGM)
+- Twitter: [@twitterhandle](https://twitter.com/AmaliaGomezMoro)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/maria-amalia-gomez-moro/)
+
 
 ## 🤝 Contributing
 

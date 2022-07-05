@@ -1,0 +1,20 @@
+.book {
+  border: 1px solid #000;
+  margin: 20px;
+}
+
+body {
+  text-align: center;
+  background-color:rgb(241, 247, 77);
+  margin-top: 30%;
+}
+
+.awesome-title {
+  color: rgb(56, 54, 54);
+  font-size: 200%;
+}
+
+.book {
+  border-style: none;
+  
+}
