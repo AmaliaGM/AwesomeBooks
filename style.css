@@ -24,7 +24,8 @@ body {
   justify-content: space-between;
   position: fixed;
   top: 0;
-  background-color: beige;
+  background-color: rgb(255, 255, 255);
+
 }
 
 nav.nav-bar {
@@ -45,10 +46,10 @@ nav.nav-bar {
 }
 
 .nav.add {
- border-left: solid 1px #000;
- border-right: solid 1px #000;
- padding-left: 10px;
- padding-right: 10px;
+  border-left: solid 1px #000;
+  border-right: solid 1px #000;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .nav:hover {
@@ -84,7 +85,6 @@ main>* {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 40px 0;
   border: 1px solid #000;
 }
 
@@ -152,7 +152,7 @@ form input {
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  margin-top: 40px;
+  margin: 40px 0;
 }
 
 #contact.active {
@@ -160,6 +160,7 @@ form input {
   flex-direction: column;
   align-items: center;
   gap: 40px;
+  margin: 40px 0;
 }
 
 #book-section.inactive {
@@ -169,4 +170,8 @@ form input {
 .footer {
   border: 1px solid #000;
   padding: 8px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
 }
