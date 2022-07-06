@@ -1,5 +1,6 @@
 // KEEP TRACK OF NUMBER OF BOOKS ADDED
 
+
 function bookIDgenerator() {
   let previousID = JSON.parse(localStorage.getItem('bookIDgenerator'));
   const newID = previousID + 1;
@@ -30,7 +31,7 @@ add.addEventListener('click', () => {
 
   if (title !== '' && author !== '') {
     let libraryArr = JSON.parse(localStorage.getItem('libraryArr'));
-    if (libraryArr == null) {
+    if (libraryArr === null) {
       libraryArr = [];
     }
 
@@ -43,7 +44,8 @@ add.addEventListener('click', () => {
 function printBooks() {
   const bookList = document.getElementById('book-list');
   const libraryArr = JSON.parse(localStorage.getItem('libraryArr'));
-  // try to use map
+  
+  if (libraryArr !==null) {
   for (let i = 0; i < libraryArr.length; i += 1) {
     const book = `<li id='book${i}'class='book'>
       <div class='book-info'>            
@@ -55,6 +57,7 @@ function printBooks() {
       </li>`;
     bookList.innerHTML += book;
   }
+}
 }
 printBooks();
 
