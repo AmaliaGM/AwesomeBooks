@@ -25,7 +25,6 @@ body {
   position: fixed;
   top: 0;
   background-color: rgb(255, 255, 255);
-
 }
 
 nav.nav-bar {
@@ -68,7 +67,7 @@ main {
   gap: 40px;
 }
 
-main>* {
+main > * {
   width: 90%;
 }
 
@@ -88,8 +87,7 @@ main>* {
   border: 1px solid #000;
 }
 
-
-#book-list>* {
+#book-list > * {
   width: 100%;
 }
 
@@ -105,7 +103,6 @@ main>* {
   background-color: rgb(255, 255, 255);
   padding: 5px;
 }
-
 
 .book-info {
   display: flex;

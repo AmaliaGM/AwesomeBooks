@@ -15,21 +15,20 @@ function bookIDgenerator() {
 // ADD NEW BOOK
 class AddBook {
   constructor(ID, Title, Author) {
-    this.ID = ID,
-      this.Title = Title,
-      this.Author = Author
+    this.ID = ID;
+    this.Title = Title;
+    this.Author = Author;
   }
-};
-
+}
 
 const add = document.querySelector('#add');
-add.addEventListener('click', (e) => {
+add.addEventListener('click', () => {
   const ID = bookIDgenerator();
   const title = document.querySelector('#title').value;
   const author = document.querySelector('#author').value;
   const newBook = new AddBook(ID, title, author);
 
-  if (title !== "" && author !== "") {
+  if (title !== '' && author !== '') {
     let libraryArr = JSON.parse(localStorage.getItem('libraryArr'));
     if (libraryArr == null) {
       libraryArr = [];
@@ -83,19 +82,19 @@ removeButton.forEach((remove) => {
 
 // nav bar links functionality
 
-let list = document.querySelector('#list');
-let addNew = document.querySelector('#navAdd');
-let contact = document.querySelector('#navContact');
-let addBook = document.querySelector('#add-book');
-let contactForm = document.querySelector('#contact');
-let bookSection = document.querySelector('#book-section')
+const list = document.querySelector('#list');
+const addNew = document.querySelector('#navAdd');
+const contact = document.querySelector('#navContact');
+const addBook = document.querySelector('#add-book');
+const contactForm = document.querySelector('#contact');
+const bookSection = document.querySelector('#book-section');
 
 list.addEventListener('click', () => {
   addBook.classList.remove('active');
   contactForm.classList.remove('active');
-  bookSection.classList.remove('inactive')
+  bookSection.classList.remove('inactive');
   document.location.reload();
-})
+});
 
 addNew.addEventListener('click', () => {
   addBook.classList.add('active');
