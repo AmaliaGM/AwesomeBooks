@@ -29,22 +29,15 @@ add.addEventListener('click', (e) => {
   const author = document.querySelector('#author').value;
   const newBook = new AddBook(ID, title, author);
 
-  function doNothing() {
-    if (title === null || author === null) {
-      add.removeEventListener('click', (e));
-    } else {
-
-      let libraryArr = JSON.parse(localStorage.getItem('libraryArr'));
-      if (libraryArr == null) {
-        libraryArr = [];
-      }
-
-      libraryArr.push(newBook);
-      localStorage.setItem('libraryArr', JSON.stringify(libraryArr));
+  if (title !== "" && author !== "") {
+    let libraryArr = JSON.parse(localStorage.getItem('libraryArr'));
+    if (libraryArr == null) {
+      libraryArr = [];
     }
-  }
 
-  doNothing();
+    libraryArr.push(newBook);
+    localStorage.setItem('libraryArr', JSON.stringify(libraryArr));
+  }
 });
 
 // SHOW BOOKS ON THE PAGE
