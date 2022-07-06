@@ -23,18 +23,28 @@ class AddBook {
 
 
 const add = document.querySelector('#add');
-add.addEventListener('click', () => {
-  let libraryArr = JSON.parse(localStorage.getItem('libraryArr'));
-  if (libraryArr == null) {
-    libraryArr = [];
-  }
+add.addEventListener('click', (e) => {
   const ID = bookIDgenerator();
   const title = document.querySelector('#title').value;
   const author = document.querySelector('#author').value;
   const newBook = new AddBook(ID, title, author);
-  console.log(newBook);
-  libraryArr.push(newBook);
-  localStorage.setItem('libraryArr', JSON.stringify(libraryArr));
+
+  function doNothing() {
+    if (title === null || author === null) {
+      add.removeEventListener('click', (e));
+    } else {
+
+      let libraryArr = JSON.parse(localStorage.getItem('libraryArr'));
+      if (libraryArr == null) {
+        libraryArr = [];
+      }
+
+      libraryArr.push(newBook);
+      localStorage.setItem('libraryArr', JSON.stringify(libraryArr));
+    }
+  }
+
+  doNothing();
 });
 
 // SHOW BOOKS ON THE PAGE
@@ -76,4 +86,32 @@ removeButton.forEach((remove) => {
     printBooks();
     document.location.reload();
   });
+});
+
+// nav bar links functionality
+
+let list = document.querySelector('#list');
+let addNew = document.querySelector('#navAdd');
+let contact = document.querySelector('#navContact');
+let addBook = document.querySelector('#add-book');
+let contactForm = document.querySelector('#contact');
+let bookSection = document.querySelector('#book-section')
+
+list.addEventListener('click', () => {
+  addBook.classList.remove('active');
+  contactForm.classList.remove('active');
+  bookSection.classList.remove('inactive')
+  document.location.reload();
+})
+
+addNew.addEventListener('click', () => {
+  addBook.classList.add('active');
+  bookSection.classList.add('inactive');
+  contactForm.classList.remove('active');
+});
+
+contact.addEventListener('click', () => {
+  contactForm.classList.add('active');
+  bookSection.classList.add('inactive');
+  addBook.classList.remove('active');
 });
