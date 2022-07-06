@@ -8,6 +8,7 @@
     <title>Awesome Books</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
+    <script defer src="pageDisplay.js"></script>
 </head>
 
 <body>
@@ -15,9 +16,9 @@
         <nav class="nav-bar">
             <div>Awesome Books</div>
             <ul class="links-list">
-                <li><a class="nav list" href="#book-section">List</a></li>
-                <li><a class="nav add" href="#add-book">Add new</a></li>
-                <li><a class="nav contact" href="#contact">Contact</a></li>
+                <li><a id="list" class="nav list" href="#book-section">List</a></li>
+                <li id="navAdd"><a class="nav add" href="#add-book">Add new</a></li>
+                <li id="navContact"><a class="nav contact" href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -27,7 +28,7 @@
             <ul id="book-list"></ul>
         </section>
 
-        <section id="add-book" class="inactive">
+        <section id="add-book">
             <h2 class="awesome-title">Add a new book</h2>
             <form>
                 <input id="title" type="text" name="Title" placeholder="Book Title:">
@@ -36,7 +37,7 @@
             </form>
         </section>
 
-        <section id="contact" class="inactive">
+        <section id="contact">
             <h2>Contact information</h2>
             <p>Do you have any questions or you just want to say hello?</p>
             <ul>

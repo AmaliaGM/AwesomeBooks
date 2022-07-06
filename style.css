@@ -56,7 +56,8 @@ nav.nav-bar {
 }
 
 .mainTitle {
-  padding: 5%
+  padding: 5%;
+  margin-top: 40px;
 }
 
 main {
@@ -111,15 +112,12 @@ main>* {
   flex-direction: row;
 }
 
-.remove-btn {
-  /* margin-right: 10px; */
+/* .remove-btn {
+   margin-right: 10px;
 }
-
-#add-book {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
+ */
+#contact {
+  display: none;
 }
 
 form {
@@ -138,13 +136,6 @@ form input {
   width: max-content;
 }
 
-#contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-}
-
 #contact ul {
   display: flex;
   flex-direction: column;
@@ -152,11 +143,26 @@ form input {
   padding-left: 40px;
 }
 
-#add-book.inactive {
+#add-book {
   display: none;
 }
 
-#contact.inactive {
+#add-book.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+#contact.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+#book-section.inactive {
   display: none;
 }
 
